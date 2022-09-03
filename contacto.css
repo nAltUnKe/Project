@@ -1,0 +1,279 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;1,700&family=Raleway:wght@300;400;500;600&display=swap');
+
+
+:root{
+    --green: hsl(162, 45%, 56%);
+    --lead: hsl(162, 2%, 56%);
+    --blue: hsl(220, 85%, 57%);
+    --violet: hsl(272, 92%, 32%);
+    --tex-white: hsl(0, 0%, 100%);
+    --text-light-gray: hsl(0, 0%, 90%);
+    --body-bg-color: hsl(200, 54%, 12%);
+    --glass-bg-color: hsla(0, 0%, 100%, 0.05);
+    --border-color: hsla(0, 0%, 100%, 0.25);
+    --blur: blur(10px);/* desenfoque de elementos agregados*/
+    --button-hover-color: hsla(0, 0%, 0%, 0.3);/* color al pasar el mouse en el botón*/
+}
+html{
+    height: 1800px;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--body-bg-color);
+    color: var(--text-light-gray);
+    font-family: 'Raleway','Lato', sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 1.5;
+    overflow-x: hidden;
+}
+
+body::after,
+body::before{
+    content:'';
+    position: fixed;
+    height: 400px;
+    width: 400px;
+    border-radius:50%;
+    z-index: -1;
+    filter: blur(150px);
+    opacity: 0.5;
+}
+body::before{
+    background-color: var(--blue);
+    left: 0;
+    bottom: 0;
+    transform: translate(-50%);
+}
+body::after{
+    background-color: var(--violet);
+    right: 0;
+    top: 0;
+    transform: translate(50%);
+}
+
+
+a{
+    text-decoration: none;
+    font-weight: 500;
+    display: inline-block;
+}
+.navbar{
+    height: 100px; 
+    width:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    position:absolute;
+    top: 0;
+    z-index: 999;
+        
+
+}
+
+#navbar_title{
+    color:aliceblue;
+    font-size:45px ;
+    
+}
+.navbar__container{
+
+    width: 200%;
+    max-width: 1050px;
+    position: relative;
+    z-index: 1;
+}
+
+.gradient-text{
+    background: linear-gradient(to right, var(--green), var(--lead));
+    -webkit-background-clip: text ;
+    background-clip: text;
+    color: transparent;
+}
+
+.navbar__main{
+    min-height: 20vh;
+    padding: 60px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+
+}
+
+.navbar__container {
+	display:flex;
+	justify-content: space-between;
+	height: 80px;
+	z-index: 1;
+	width: 100%;
+	max-width: 1300px;
+	margin: 0 auto;
+	padding: 0 15px 50px;
+}
+
+
+.navbar__menu {
+	display: flex;
+	align-items:center;
+	list-style: none;
+	text-align: center;
+	padding-top: 25px;
+    
+	
+}
+
+.nav__links {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-decoration: none;
+	padding: 0 1rem;
+	height: 100%;
+    background: linear-gradient(to right, var(--green), var(--lead));
+    -webkit-background-clip: text ;
+    background-clip: text;
+    color: transparent;
+}
+.navbar__btn{
+    height: 55px;
+    width: 95%;
+    justify-content: space-between;
+    font-size: 16px;
+    font-weight: 502;
+    text-transform: capitalize;/*Primera letra en mayúscula*/
+    cursor: pointer;
+    border-radius: 25px;
+    user-select: none;
+    background: linear-gradient(to right, var(--green), var(--lead));
+    border: none;
+    color: var(--tex-white);
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.navbar__main .buttom::before{
+    content: "";
+    position: absolute;
+    left:0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    transition: background-color 0.5 ease;
+    z-index: -1;
+}
+
+.navbar__main .buttom:hover::before{
+    background-color: var(--button-hover-color);
+}
+
+.navbar__main ::placeholder{
+    color: inherit;
+}
+
+
+
+
+
+.templatemo_contacttitle {
+    width: 100%;
+    margin-bottom: 10px;
+    font-size: 32px;
+    font-weight: bold;
+    color: #ffffff;
+    text-align: center;
+}
+
+.templatemo_sub_contacttitle {
+    width: 100%;
+    font-size: 22px;
+    color: var(--blur);
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.templatemo_contact {
+    margin: 30px;
+    width: 100%;
+    margin-left: 15%;
+}
+.row{
+    position:fixed;
+    text-size-adjust:initial;
+    padding-left: 50%;
+
+}
+
+.form-content{
+    padding: 50px 50px  ;
+}
+.templatemo_contactform input, textarea {
+    align-items: center;
+    text-align: center;
+    width: 50%;
+    background: #282828;
+    border: 1px solid #393939;
+    padding: 7px 10px;
+    margin: 0px 0px 10px 0px;
+    background-color: #FAFAFA;
+}
+
+.templatemo_contactform textarea {
+    height: 100px;
+}
+
+
+.text__content{
+    text-align: center;
+}
+
+
+.navbar__btn{
+    height: 35px;
+    width: 20%;
+    justify-content: space-between;
+    font-size: 20px;
+    font-weight: 502;
+    text-transform: capitalize;/*Primera letra en mayúscula*/
+    cursor: pointer;
+    border-radius: 25px;
+    user-select: none;
+    background: linear-gradient(to right, var(--green), var(--lead));
+    border: none;
+    color: var(--tex-white);
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.col-md-8 .buttom::before{
+    content: "";
+    position: absolute;
+    left:0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    transition: background-color 0.5 ease;
+    z-index: -1;
+}
+
+.col-md-8 .buttom:hover::before{
+    background-color: var(--button-hover-color);
+}
+
+.col-md-8 ::placeholder{
+    color: inherit;
+}
+
+.image__container{
+    float: left;
+    padding-left:45px ;
+}
